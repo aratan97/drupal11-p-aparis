@@ -1,0 +1,16 @@
+{{ page.navigation }}
+
+{# 1. HEADER #}
+{{ page.hero }}
+
+{# 2. LE CONTENU (Où les blocs vont s'injecter) #}
+<main role="main" id="main-content">
+  {{ page.messages }}
+  <p>Je suis sur la page d'accueil</p>
+
+  {# C'est ici que TOUS les blocs vont atterrir (Hero, Quêtes, Lore...) #}
+  {{ page.content }}
+</main>
+
+
+{{ page.footer }}

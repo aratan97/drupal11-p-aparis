@@ -5,6 +5,8 @@ core_version_requirement: '^11'
 base theme: stable9
 
 regions:
+  navigation: 'Navigation'
+  hero: 'Hero'
   header: 'Header'
   content: 'Content'
   footer: 'Footer'

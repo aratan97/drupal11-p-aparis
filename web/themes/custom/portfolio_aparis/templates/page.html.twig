@@ -1,0 +1,211 @@
+{{ page.header }}
+{{ page.highlighted }}
+{{ page.help }}
+<nav class="navbar navbar-expand-lg fixed-top custom-navbar" id="navbar">
+  <div class="container">
+    <a class="navbar-brand nav-logo-link d-flex align-items-center" href="#hero">
+      <img src="{{ base_path ~ active_theme_path() }}/img/logo_ap.svg" alt="Arthur PARIS - Logo Intégrateur Web" class="img-fluid nav-logo-img">
+    </a>
+
+    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav gap-lg-4">
+        <li class="nav-item">
+          <a class="nav-link" href="#inventaire">Inventaire</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#quetes">Quêtes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#lore">Lore</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#guilde">Guilde</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="hero"
+         class="d-flex flex-column justify-content-center align-items-center text-center position-relative min-vh-100 container-fluid px-0">
+
+  <div class="moon"></div>
+
+  <div class="avatar-container position-relative mb-4">
+    <div class="avatar-glow"></div>
+    <img src="{{ base_path ~ active_theme_path() }}/img/icon-test.png" alt="Avatar Arthur PARIS" class="avatar img-fluid position-relative">
+  </div>
+
+  <p class="pixel-text hero-eyebrow mb-3">Front-End Developer ✦ Artisan Drupal</p>
+  <h1 class="hero-name mb-3">Arthur PARIS</h1>
+  <p class="hero-title mb-5 px-3">Bâtisseur d'interfaces robustes & Forgeron de code propre.</p>
+
+  <div class="hero-ctas d-flex gap-3 justify-content-center flex-wrap position-relative z-1 mb-5">
+    <a href="#inventaire" class="btn btn-primary d-flex align-items-center gap-2">
+      <img src="{{ base_path ~ active_theme_path() }}/img/icon-test.png" alt="Icone Arsenal" class="btn-icon">
+      Découvrir mon arsenal
+    </a>
+    <a href="#guilde" class="btn btn-secondary d-flex align-items-center gap-2">
+      <img src="{{ base_path ~ active_theme_path() }}/img/icon-test.png" alt="Icone Requête" class="btn-icon">
+      Lancer une requête
+    </a>
+  </div>
+
+  <div class="mountains position-absolute bottom-0 start-0 w-100">
+    <svg viewBox="0 0 1440 280" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" class="w-100 h-100">
+      <polygon
+        points="0,280 0,180 80,120 160,160 240,90 320,140 400,70 480,130 560,100 640,150 720,80 800,130 880,110 960,140 1040,90 1120,140 1200,110 1280,150 1360,120 1440,160 1440,280"
+        fill="#1a2744" opacity="0.4"/>
+      <polygon
+        points="0,280 0,220 60,170 120,200 200,140 280,180 360,120 440,170 520,140 600,190 680,110 760,160 840,130 920,170 1000,120 1080,160 1160,130 1240,170 1320,140 1440,200 1440,280"
+        fill="#1c2e50" opacity="0.6"/>
+      <polygon
+        points="0,280 0,260 80,210 160,250 240,190 360,240 460,200 560,240 640,210 720,250 800,195 900,240 1000,210 1100,250 1200,215 1300,250 1440,240 1440,280"
+        fill="#080c13"/>
+    </svg>
+  </div>
+</section>
+
+<main role="main" id="main-content">
+  {{ page.messages }} {# CRUCIAL pour l'admin #}
+  {{ page.content }}
+
+  <section id="inventaire" class="py-5 container">
+    <div class="section-title ">L'Inventaire</div>
+    <div class="pixel-text mb-4">✦ COMPETENCES & ARMES ✦</div>
+
+    <div class="inventory-grid">
+      <div class="inventory-category ">
+        <div class="category-header">
+          <img src="{{ base_path ~ active_theme_path() }}/img/icon-test.png" alt="Icône Fondations" class="category-icon">
+          <span class="category-title">Fondations & Langages</span>
+        </div>
+        <div class="slots-grid">
+          <div class="slot master">
+            <img src="{{ base_path ~ active_theme_path() }}/img/icon-test.png" alt="HTML/CSS" class="slot-icon-img">
+            <span class="pixel-text slot-name">HTML/CSS</span>
+          </div>
+          <div class="slot master">
+            <img src="{{ base_path ~ active_theme_path() }}/img/icon-test.png" alt="SASS" class="slot-icon-img">
+            <span class="pixel-text slot-name">SASS</span>
+          </div>
+          <div class="slot">
+            <img src="{{ base_path ~ active_theme_path() }}/img/icon-test.png" alt="JS" class="slot-icon-img">
+            <span class="pixel-text slot-name">JS</span>
+          </div>
+          <div class="slot">
+            <img src="{{ base_path ~ active_theme_path() }}/img/icon-test.png" alt="Bootstrap" class="slot-icon-img">
+            <span class="pixel-text slot-name">BOOTSTRAP</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="inventory-category ">
+        <div class="category-header">
+          <img src="{{ base_path ~ active_theme_path() }}/img/icon-test.png" alt="Icône CMS" class="category-icon">
+          <span class="category-title">Magie Noire & CMS</span>
+        </div>
+        <div class="slots-grid">
+          <div class="slot legendary">
+            <img src="{{ base_path ~ active_theme_path() }}/img/icon-test.png" alt="Drupal" class="slot-icon-img">
+            <span class="pixel-text slot-name">Drupal</span>
+          </div>
+          <div class="slot master">
+            <img src="{{ base_path ~ active_theme_path() }}/img/icon-test.png" alt="Twig" class="slot-icon-img">
+            <span class="pixel-text slot-name">Php storm</span>
+          </div>
+          <div class="slot">
+            <img src="{{ base_path ~ active_theme_path() }}/img/icon-test.png" alt="Git" class="slot-icon-img">
+            <span class="pixel-text slot-name">Git</span>
+          </div>
+          <div class="slot">
+            <img src="{{ base_path ~ active_theme_path() }}/img/icon-test.png" alt="Figma" class="slot-icon-img">
+            <span class="pixel-text slot-name">Photoshop</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pixel-divider"></div>
+  </section>
+
+  <section id="quetes" class="container py-5">
+    <div class="section-title ">Journal de Quêtes</div>
+    <div class="pixel-text mb-4">✦ Quetes accomplies ✦</div>
+
+    <div class="quest-list">
+      <div class="quest-card">
+        <div class="quest-header">
+          <div>
+            <h3 class="quest-name">Refonte Portail Institutionnel</h3>
+            <p class="quest-date">Mission Confidentielle — 2024</p>
+          </div>
+        </div>
+
+        <div class="quest-layout">
+          <div class="quest-image-container">
+            <span style="font-size: 3rem; opacity: 0.5;">🖼️</span>
+            <span class="pixel-text" style="color: white; margin-top: 1rem; opacity: 0.7;">[Image du Projet]</span>
+          </div>
+          <div class="quest-info">
+            <div class="quest-block-body">Refonte complète d'un portail à fort trafic nécessitant une architecture robuste et une conformité stricte. Découpage modulaire poussé sur Drupal, intégration au pixel près des maquettes Figma, et validation des normes d'accessibilité (RGAA).</div>
+            <div class="quest-tags">
+              <span class="quest-tag">Drupal 10</span>
+              <span class="quest-tag">Twig</span>
+              <span class="quest-tag">SASS</span>
+              <span class="quest-tag">Accessibilité</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="mt-4 text-center"><a href="#" class="btn btn-primary btn-sm-280">Voir plus</a></p>
+
+    <div class="pixel-divider"></div>
+  </section>
+
+  <section id="lore" class="container">
+    <div class="section-title">Le Lore</div>
+    <div class="pixel-text section-rune">✦ FICHE DE PERSONNAGE ✦</div>
+
+    <div class="lore-container row mt-5">
+      <div class="lore-card col-md-4">
+        <div class="lore-avatar">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="image-rendering:pixelated; width:100%; height:100%; margin-top:-10px;">
+            <rect x="12" y="7" width="8" height="8" fill="#d4a57a"></rect>
+            <rect x="12" y="7" width="8" height="2" fill="#3d2406"></rect>
+            <rect x="14" y="11" width="2" height="2" fill="#1a3a6a"></rect>
+            <rect x="18" y="11" width="2" height="2" fill="#1a3a6a"></rect>
+            <rect x="11" y="16" width="10" height="12" fill="#1a2f6e"></rect>
+          </svg>
+        </div>
+        <div class="lore-stat-row">
+          <span class="pixel-text">Classe</span>
+          <span class="class-text pixel-text">Integrateur Web</span>
+        </div>
+      </div>
+
+      <div class="lore-infos col-md-7 offset-md-1 mt-md-0 mt-4">
+        <h2 class="lore-heading">Arthur PARIS</h2>
+        <p class="lore-paragraph">
+          Ancien agnostique du code devenu véritable <strong>artisan du web</strong>. J'ai développé une obsession pour la rigueur technique : l'espacement parfait, le composant modulable, et le code propre ("Clean Code").
+        </p>
+        <p class="lore-paragraph">
+          En dehors du terminal, je suis un passionné d'<strong>Histoire</strong> et de photographie. Des domaines qui exigent patience, observation et un sens aigu du détail. Et oui, ma passion pour le <em>Seigneur des Anneaux</em> n'a d'égal que ma volonté de forger des interfaces indestructibles.
+        </p>
+      </div>
+    </div>
+    <div class="pixel-divider"></div>
+  </section>
+
+</main>
+
+<footer class="pixel-text footer-copyright mt-5 mb-5 text-center">
+  © 2026 Arthur PARIS.
+</footer>
