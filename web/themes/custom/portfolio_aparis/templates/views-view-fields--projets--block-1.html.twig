@@ -1,0 +1,24 @@
+{# Fichier : views-view-fields--projets--block-1.html.twig #}
+
+<div class="quest-card">
+  <div class="quest-header">
+    <div>
+      <h3 class="quest-name">{{ fields.title.content }}</h3>
+      <p class="quest-date">{{ fields.field_projet_sous_titre.content }}</p>
+    </div>
+  </div>
+
+  <div class="quest-layout">
+    <div class="quest-image-container">
+      {{ fields.field_projet_image.content }}
+    </div>
+    <div class="quest-info">
+      <div class="quest-block-body">
+        {{ fields.field_projet_description.content }}
+      </div>
+      <div class="quest-tags">
+        {{ fields.field_projet_technos.content }}
+      </div>
+    </div>
+  </div>
+</div>

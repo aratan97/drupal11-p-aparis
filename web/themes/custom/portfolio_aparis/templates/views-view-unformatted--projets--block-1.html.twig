@@ -1,0 +1,19 @@
+{# Fichier : views-view-unformatted--projets--block-1.html.twig #}
+
+<section class="container py-5">
+  <div class="section-title">Journal de Quêtes</div>
+  <div class="pixel-text mb-4">✦ Quêtes accomplies ✦</div>
+
+  <div class="quest-list">
+    {# C'est ici que Drupal va cracher toutes tes "quest-card" à la suite #}
+    {% for row in rows %}
+      {{ row.content }}
+    {% endfor %}
+  </div>
+
+  <p class="mt-4 text-center">
+    <a href="/projets" class="btn btn-primary btn-sm-280">Voir plus</a>
+  </p>
+
+  <div class="pixel-divider"></div>
+</section>
